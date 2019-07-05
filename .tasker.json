@@ -1,9 +1,1 @@
-{
-    "list":[{
-        "text": "one",
-        "complete": true
-    }, {
-        "text": "two",
-        "complete": false
-    }]
-}
+{"list":[{"complete":false,"text":"task"}]}

@@ -25,7 +25,7 @@ void List::completeItem(int index) {
 void List::print() {
     if (this->list.size() > 0) {
         for (int i = 0; i < this->list.size(); i++) {
-            std::cout << this->list[i].display() << std::endl;
+            std::cout << i << " " << this->list[i].display() << std::endl;
         }
     }
 }
