@@ -18,11 +18,13 @@ void Item::markAsComplete() {
 }
 
 std::string Item::display() {
+    const std::string box = "\u2610";
+    const std::string tick = "\u2713";
     if (this->complete) {
-        return "[x] " + this->text;
+        return tick + " " + this->text;
     }
     else {
-        return "[ ] " + this->text;
+        return box + " " + this->text;
     }
 }
 
