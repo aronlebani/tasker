@@ -41,8 +41,12 @@ void List::save() {
 
 void List::read() {
     std::ifstream ifs{ this->filePath };
-    nlohmann::json data = nlohmann::json::parse(ifs);
-    this->parse(data);
+    if (!ifs.good()) {
+        this->save();
+    } else {
+        nlohmann::json data = nlohmann::json::parse(ifs);
+        this->parse(data);
+    }
 }
 
 void List::parse(nlohmann::json list) {

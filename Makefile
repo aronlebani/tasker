@@ -11,10 +11,10 @@ OBJ = item.o list.o
 
 # Make everything
 .PHONY: all
-all: main
+all: tasker
 
 # Ultimate target
-main: main.cpp $(OBJ)
+tasker: main.cpp $(OBJ)
 	$(CC) -o $@ $< $(OBJ) $(CFLAGS)
 
 # Dependencies
