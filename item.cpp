@@ -17,14 +17,14 @@ void Item::markAsComplete() {
     this->complete = true;
 }
 
-std::string Item::display() {
+std::string Item::display(int index) {
     const std::string box = "\u2610";
     const std::string tick = "\u2713";
     if (this->complete) {
-        return tick + " " + this->text;
+        return tick + " (" + std::to_string(index) + ") " + this->text;
     }
     else {
-        return box + " " + this->text;
+        return box + " (" + std::to_string(index) + ") " + this->text;
     }
 }
 

@@ -10,7 +10,7 @@ class Item {
         Item();
         Item(std::string text);
         void markAsComplete();
-        std::string display();
+        std::string display(int index);
         void parse(nlohmann::json item);
         nlohmann::json dump();
 

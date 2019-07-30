@@ -23,11 +23,13 @@ void List::completeItem(int index) {
 }
 
 void List::print() {
+    std::cout << "Tasker" << std::endl << std::endl;
     if (this->list.size() > 0) {
         for (int i = 0; i < this->list.size(); i++) {
-            std::cout << i << " " << this->list[i].display() << std::endl;
+            std::cout << this->list[i].display(i) << std::endl;
         }
     }
+    std::cout << std::endl;
 }
 
 void List::save() {
